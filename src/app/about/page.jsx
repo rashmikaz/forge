@@ -1,8 +1,11 @@
 "use client";
+// import image1 from "../../../public/images/image-1.jpg";
+import image2 from "../../../public/images/image-2.jpeg";
+import Image from "next/image";
 
 const about = () => {
   return (
-    <div>
+    <>
       <h1 className="text-7xl pb-11">Hey we're Forge !</h1>
       <div>
         <p className="w-145 text-2xl pb-8 text-[#1E1E1E] leading-relaxed">
@@ -26,7 +29,23 @@ const about = () => {
           Lorem ipsum dolor, amet, conse adipiscing elit, sed do, Lorem ipsum
         </p>
       </div>
-    </div>
+
+      <div className="relative bottom-88">
+        <h1 className="text-7xl pb-11">“GREATEST TEAM EVER”</h1>
+        <div>
+          {/* <Image
+          src={image1}
+          alt="image1"
+          className="inline-block pr-8 w-145 h-120"
+        /> */}
+          <Image
+            src={image2}
+            alt="image2"
+            className="inline-block pr-8 w-110"
+          />
+        </div>
+      </div>
+    </>
   );
 };
 
