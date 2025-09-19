@@ -30,7 +30,7 @@ const about = () => {
         </p>
       </div>
 
-      <div className="relative bottom-88">
+      <div className="relative bottom-100">
         <h1 className="text-7xl pb-11">“GREATEST TEAM EVER”</h1>
         <div>
           {/* <Image
@@ -41,9 +41,19 @@ const about = () => {
           <Image
             src={image2}
             alt="image2"
-            className="inline-block pr-8 w-110"
+            className="inline-block pr-8 w-110 my-6 "
           />
         </div>
+      </div>
+      <div>
+        <p className="w-full text-2xl pb-8 text-[#1E1E1E] leading-relaxed relative bottom-85">
+          Lorem ipsum dolor sit amet, con dhsnqw adipiscing elit, sed do Lorem
+          ipsum dolor amet, conse adipiscing elit, sed do Lorem ipsum dolor sit
+          amet, con dhsnqw adipiscing elit, sed do Lorem ipsum dolor amet, conse
+          adipiscing elit, sed do ipsum dolor amet, conse adipiscing elit, sed
+          do Lorem ipsum dolor sit amet, con dhsnqw adipiscing elit, sed do,
+          Lorem ipsum dolor, amet, conse adipiscing elit,
+        </p>
       </div>
     </>
   );
