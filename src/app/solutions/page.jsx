@@ -1,4 +1,5 @@
 import React from "react";
+import Scroll from "../components/Scroll";
 
 const page = () => {
   return (
@@ -10,6 +11,10 @@ const page = () => {
         Our work style is adaptive. We partner with you to apply the right
         services at the right time in order to support your needs and growth.
       </p>
+
+      <div>
+        <Scroll />
+      </div>
     </div>
   );
 };
