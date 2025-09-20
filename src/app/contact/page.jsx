@@ -6,6 +6,8 @@ export default function ContactPage() {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
       </p>
 
+      {/* contact form */}
+
       <div className="max-w-2xl mx-auto py-10 relative right-55 bottom-5">
         <div className="border-b border-gray-300 py-8">
           <div className="flex items-start gap-4">
@@ -65,6 +67,23 @@ export default function ContactPage() {
               <p className="text-sm text-gray-500">max de</p>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* contact details */}
+
+      <div className="w-52 relative left-200 bottom-150">
+        <div className="pb-8">
+          <h3 className="text-lg text-gray-500">CONTACT DETAILS</h3>
+          <h3 className="text-lg text-black-500">forge@gmail.com</h3>
+          <h3 className="text-lg text-black-500">+94 90 56412789</h3>
+        </div>
+
+        <div className="pb-8">
+          <h3 className="text-lg text-gray-500">BUSINESS DETAILS</h3>
+          <h3 className="text-lg text-black-500">
+            No 112 galle road, western province, colombo
+          </h3>
         </div>
       </div>
     </>
