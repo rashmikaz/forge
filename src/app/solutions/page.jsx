@@ -12,7 +12,7 @@ const page = () => {
         services at the right time in order to support your needs and growth.
       </p>
 
-      <div>
+      <div className="relative left-270 top-33">
         <Scroll />
       </div>
     </div>
