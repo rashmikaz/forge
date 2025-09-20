@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const about = () => {
   return (
-    <div>
+    <div className="pt-25">
       <h1 className="text-7xl pb-11">Hey we're Forge !</h1>
       <div>
         <p className="w-145 text-2xl pb-8 text-[#1E1E1E] leading-relaxed">

@@ -1,6 +1,6 @@
 export default function ContactPage() {
   return (
-    <>
+    <div className="pt-25">
       <h1 className="w-160 text-7xl ">Lorem ipsum dolor consectetur </h1>
       <p className="w-130 text-2xl pb-8 text-[#1E1E1E] leading-relaxed">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -85,7 +85,10 @@ export default function ContactPage() {
             No 112 galle road, western province, colombo
           </h3>
         </div>
+
+        <div className="pb-8"></div>
+        <h3 className="text-lg text-gray-500">SOCIAL MEDIA</h3>
       </div>
-    </>
+    </div>
   );
 }
