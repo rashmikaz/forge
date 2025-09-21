@@ -1,3 +1,5 @@
+import Button from "../components/Button";
+
 export default function ContactPage() {
   return (
     <div className="pt-25">
@@ -88,6 +90,10 @@ export default function ContactPage() {
 
         <div className="pb-8"></div>
         <h3 className="text-lg text-gray-500">SOCIAL MEDIA</h3>
+      </div>
+
+      <div className="relative bottom-170 right-85">
+        <Button />
       </div>
     </div>
   );
