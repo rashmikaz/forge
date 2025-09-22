@@ -1,6 +1,6 @@
 import Button from "../components/Button";
 
-export default function ContactPage() {
+const page = () => {
   return (
     <div className="pt-25 pl-44 pr-44">
       <h1 className="w-160 text-7xl ">Lorem ipsum dolor consectetur </h1>
@@ -97,4 +97,6 @@ export default function ContactPage() {
       </div>
     </div>
   );
-}
+};
+
+export default page;
