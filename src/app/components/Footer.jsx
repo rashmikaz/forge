@@ -17,8 +17,8 @@ const Footer = () => {
       onMouseMove={handleMouseMove}
       className="bg-[#1E1E1E] text-gray-300 px-8 py-30 pl-44 pr-44"
     >
-      <div className="flex flex-col md:flex-row items-center justify-between border-b border-gray-600 pb-12">
-        <div className="text-white relative bottom-23">
+      <div className="flex flex-col md:flex-row items-center justify-between border-b border-gray-600 pb-4 relative bottom-10">
+        <div className="text-white relative bottom-16">
           <h2 className="text-4xl md:text-7xl font-light flex items-center gap-4">
             <Image
               src={image2}
@@ -49,6 +49,15 @@ const Footer = () => {
           >
             Get in touch
           </button>
+        </div>
+      </div>
+
+      <div className="mt-3 flex flex-col md:flex-row justify-center items-center gap-6 relative right-80 top-7">
+        <div className="px-6 py-3 border border-gray-500 rounded-full text-gray-300 text-sm md:text-base">
+          newtecCompanytecdk@gmail.com
+        </div>
+        <div className="px-6 py-3 border border-gray-500 rounded-full text-gray-300 text-sm md:text-base">
+          +94 983 3892 64
         </div>
       </div>
 
