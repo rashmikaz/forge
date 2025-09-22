@@ -2,10 +2,11 @@
 // import image1 from "../../../public/images/image-1.jpg";
 import image2 from "../../../public/images/image-2.jpeg";
 import Image from "next/image";
+import Footer from "../components/Footer";
 
 const about = () => {
   return (
-    <div className="pt-25">
+    <div className="pt-25 pl-44 pr-44">
       <h1 className="text-7xl pb-11">Hey we're Forge !</h1>
       <div>
         <p className="w-145 text-2xl pb-8 text-[#1E1E1E] leading-relaxed">

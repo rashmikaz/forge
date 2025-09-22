@@ -3,7 +3,7 @@ import Scroll from "../components/Scroll";
 
 const page = () => {
   return (
-    <div className="pt-25">
+    <div className="pt-25 pl-44 pr-44">
       <h1 className="w-162 text-7xl ">
         Flexible and results driven—so that your game is never off.
       </h1>
@@ -12,7 +12,7 @@ const page = () => {
         services at the right time in order to support your needs and growth.
       </p>
 
-      <div className="relative left-270 top-33">
+      <div className="absolute left-310 top-165">
         <Scroll />
       </div>
     </div>

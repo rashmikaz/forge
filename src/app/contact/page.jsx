@@ -2,7 +2,7 @@ import Button from "../components/Button";
 
 export default function ContactPage() {
   return (
-    <div className="pt-25">
+    <div className="pt-25 pl-44 pr-44">
       <h1 className="w-160 text-7xl ">Lorem ipsum dolor consectetur </h1>
       <p className="w-130 text-2xl pb-8 text-[#1E1E1E] leading-relaxed">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -92,7 +92,7 @@ export default function ContactPage() {
         <h3 className="text-lg text-gray-500">SOCIAL MEDIA</h3>
       </div>
 
-      <div className="relative bottom-170 right-85">
+      <div className="absolute top-190 left-60">
         <Button />
       </div>
     </div>
