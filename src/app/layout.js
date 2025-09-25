@@ -1,15 +1,12 @@
-import { Geist, Geist_Mono } from "next/font/google";
+// src/app/layout.js
+import { Inria_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inriaSans = Inria_Sans({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "700"], // ✅ only available weights
+  variable: "--font-inria-sans",
 });
 
 export const metadata = {
@@ -20,9 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${inriaSans.variable} antialiased`}>
         <Navbar />
         {children}
       </body>
