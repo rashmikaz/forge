@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../components/Button";
 
 const Intro = () => {
   return (
@@ -14,6 +15,27 @@ const Intro = () => {
             We build custom SaaS, AI tools, and lightning-fast MVPs for startups
             We build custom SaaS, AI tools, and lightning-fast MVPs for
           </p>
+        </div>
+
+        <div className="ml-195 relative bottom-10">
+          <div className="pb-10">
+            <div
+              className="
+            w-35 h-35 
+            rounded-full 
+            bg-blue-600 
+            text-white 
+            text-sm 
+            flex items-center justify-center 
+            transition-all duration-300 
+            hover:bg-[#22262C] 
+            hover:translate-y-[-10px] 
+            hover:shadow-lg
+          "
+            >
+              about us
+            </div>
+          </div>
         </div>
       </div>
     </>
