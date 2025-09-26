@@ -2,6 +2,7 @@
 
 import Landing from "./landing/page";
 import Intro from "./intro/page";
+import InfiniteScroll from "./components/InfiniteScroll";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <section className="h-screen w-full">
         <Intro />
       </section>
+      <InfiniteScroll />
     </main>
   );
 }
