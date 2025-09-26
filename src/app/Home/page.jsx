@@ -9,7 +9,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 
-const Landing = () => {
+const Home = () => {
   const [scrollY, setScrollY] = useState(0);
   const [exitAnimation, setExitAnimation] = useState(false);
 
@@ -178,4 +178,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default Home;

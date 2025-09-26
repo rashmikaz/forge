@@ -5,11 +5,13 @@ const Navbar = () => {
   return (
     <nav className=" text-gray pt-9 pl-44 pr-44">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <h1 className="text-1xl font-bold  text-gray-400">FORGE.</h1>
+        <h1 href="/" className="text-1xl font-bold  text-gray-400">
+          FORGE.
+        </h1>
 
         <ul className="flex space-x-15 font-medium text-gray-400">
           <li>
-            <Link href="" className="hover:text-gray-400">
+            <Link href="/" className="hover:text-gray-400">
               Home
             </Link>
           </li>

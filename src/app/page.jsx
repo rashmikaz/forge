@@ -1,22 +1,23 @@
 "use client";
 
-import Landing from "./landing/page";
+import HomeComponent from "./Home/page"; // rename import
 import Intro from "./intro/page";
 import InfiniteScroll from "./components/InfiniteScroll";
+import Service from "./components/Service";
 
-export default function Home() {
+export default function MainPage() {
   return (
     <main className="w-full">
-      {/* First Section */}
       <section className="h-screen w-full">
-        <Landing />
+        <HomeComponent />
       </section>
 
-      {/* Next Section */}
       <section className="h-screen w-full">
         <Intro />
       </section>
+
       <InfiniteScroll />
+      <Service />
     </main>
   );
 }

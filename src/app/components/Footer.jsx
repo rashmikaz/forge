@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <footer
       onMouseMove={handleMouseMove}
-      className="bg-[#1E1E1E] text-gray-300 px-8 py-30 pl-44 pr-44"
+      className="bg-[#1E1E1E] text-gray-300 px-8 py-40 pl-44 pr-44"
     >
       <div className="flex flex-col md:flex-row items-center justify-between border-b border-gray-600 pb-4 relative bottom-10">
         <div className="text-white relative bottom-16">

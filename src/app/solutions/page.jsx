@@ -35,7 +35,7 @@ const Page = () => {
           <Scroll />
         </div>
 
-        <div className="pt-40 pl-[150px] mb-58 flex flex-col space-y-20 relative top-40 right-10">
+        <div className="pt-40 pl-[150px] mb-88 flex flex-col space-y-20 relative top-40 right-10">
           {services.map((service, index) => (
             <div
               key={index}
