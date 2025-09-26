@@ -28,7 +28,7 @@ const stats = [
 
 export default function InfiniteScroll() {
   return (
-    <div className="relative w-full overflow-hidden bg-[#f6fafd] py-10">
+    <div className="relative w-full overflow-hidden bg-[#f6fafd] pb-10">
       <motion.div
         className="flex gap-6 items-stretch"
         animate={{ x: ["0%", "-50%"] }}

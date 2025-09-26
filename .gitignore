@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Ignore public images folder
 /public/images/
+
+# Ignore public video folder
+/public/videos/

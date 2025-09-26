@@ -2,10 +2,12 @@ export const services = [
   {
     title: "DIGITAL SOLUTIONS AND MEDIA",
     sub: "DIGITAL SOLUTIONS",
+
     description_01:
       " Our work style is adaptive. We partner with you to apply the right services at the right time in order to support your needs and growth.",
     description_02:
       " Our work style is adaptive. We partner with you to apply the right services at the right time in order to support your needs.",
+    video: "/videos/video-1.mp4",
   },
 
   {
@@ -15,6 +17,7 @@ export const services = [
       " Our work style is adaptive. We partner with you to apply the right services at the right time in order to support your needs and growth.",
     description_02:
       " Our work style is adaptive. We partner with you to apply the right services at the right time in order to support your needs.",
+    video: "/videos/video-1.mp4",
   },
   {
     title: "DIGITAL SOLUTIONS AND MEDIA 03",
@@ -23,5 +26,6 @@ export const services = [
       " Our work style is adaptive. We partner with you to apply the right services at the right time in order to support your needs and growth.",
     description_02:
       " Our work style is adaptive. We partner with you to apply the right services at the right time in order to support your needs.",
+    video: "/videos/video-1.mp4",
   },
 ];
