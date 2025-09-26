@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 
 const inriaSans = Inria_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "700"], // ✅ only available weights
+  weight: ["300", "400", "700"],
   variable: "--font-inria-sans",
 });
 

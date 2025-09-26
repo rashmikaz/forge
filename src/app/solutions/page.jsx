@@ -1,10 +1,23 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Scroll from "../components/Scroll";
 import { services } from "../constants/page";
 import Footer from "../components/Footer";
 
 const Page = () => {
   const serviceColors = ["#D8E6EE", "#D9D9D9", "#1E1E1E"];
+  const [offsets, setOffsets] = useState({});
+
+  const handleMouseMove = (e, index) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 20;
+    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 20;
+    setOffsets((prev) => ({ ...prev, [index]: { x, y } }));
+  };
+
+  const handleMouseLeave = (index) => {
+    setOffsets((prev) => ({ ...prev, [index]: { x: 0, y: 0 } }));
+  };
 
   return (
     <>
@@ -18,7 +31,7 @@ const Page = () => {
           services at the right time in order to support your needs and growth.
         </p>
 
-        <div className="absolute left-310 top-165">
+        <div className="absolute top-160 left-305">
           <Scroll />
         </div>
 
@@ -56,17 +69,29 @@ const Page = () => {
                 </p>
 
                 <div
+                  onMouseMove={(e) => handleMouseMove(e, index)}
+                  onMouseLeave={() => handleMouseLeave(index)}
+                  style={{
+                    transform: `translate(${offsets[index]?.x || 0}px, ${
+                      offsets[index]?.y || 0
+                    }px)`,
+                  }}
                   className="
-                    w-28 h-28 
-                    rounded-full 
-                    bg-blue-600 
-                    text-white 
+                    w-28 h-15 
+                    rounded-3xl 
+                    bg-[#f2f8fc] 
+                    text-black 
+                    border 
+                    border-gray-400 
                     text-sm 
                     flex items-center justify-center 
-                    transition-all duration-300 
-                    hover:bg-[#22262C] 
+                    transition-transform duration-300 ease-out
+                    hover:bg-blue-600 
+                    hover:text-white 
+                    hover:border-blue-600
                     hover:-translate-y-2 
                     hover:shadow-lg
+                    cursor-pointer
                   "
                 >
                   send it
