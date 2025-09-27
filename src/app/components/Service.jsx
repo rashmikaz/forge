@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
+import Scroll from "./Scroll";
 
 const sections = [
   {
@@ -60,6 +61,19 @@ const Service = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col items-center justify-center px-6 py-12">
+      <div className="pt-12 pb-72 pl-162">
+        <h1 className="w-162 text-7xl">
+          Boost your digital potential service for you brod
+        </h1>
+        <p className="w-145 text-2xl pb-8 text-[#1E1E1E] leading-relaxed pt-8">
+          Our work style is adaptive. We partner with you to apply the right
+          services at the right time in order to support your needs and growth.
+          We partner with you to apply the right.
+        </p>
+        <div className="relative right-140 top-40">
+          <Scroll />
+        </div>
+      </div>
       <div className="w-full max-w-6xl space-y-16">
         {sections.map((section, index) => (
           <div
