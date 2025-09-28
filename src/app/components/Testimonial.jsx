@@ -66,7 +66,11 @@ export default function Testimonial() {
 
   return (
     <section className="pt-45 pl-44 pr-44 pb-15">
-      <div className="max-w-6xl w-full bg-white rounded-2xl shadow-sm flex flex-col md:flex-row ">
+      <h2 className="text-5xl w-280 my-18">
+        Our work helping clients stand out in saturated markets with
+        differentiated products and experiences.
+      </h2>
+      <div className="max-w-6xl w-full rounded-2xl shadow-sm flex flex-col md:flex-row ">
         <div className="w-full md:w-[30%] flex flex-col justify-between p-10 ">
           <p className="text-gray-700 text-lg leading-relaxed">
             {slide.testimonial}
