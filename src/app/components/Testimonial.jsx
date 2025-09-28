@@ -65,7 +65,7 @@ export default function Testimonial() {
   const slide = slides[current];
 
   return (
-    <section className="pt-45 pl-44 pr-44 pb-15">
+    <section className="pt-10 pl-44 pr-44 pb-15">
       <h2 className="text-5xl w-280 my-18">
         Our work helping clients stand out in saturated markets with
         differentiated products and experiences.
