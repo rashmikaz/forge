@@ -4,6 +4,7 @@ import HomeComponent from "./Home/page"; // rename import
 import Intro from "./intro/page";
 import InfiniteScroll from "./components/InfiniteScroll";
 import Service from "./components/Service";
+import Testimonial from "./components/Testimonial";
 
 export default function MainPage() {
   return (
@@ -18,6 +19,7 @@ export default function MainPage() {
 
       <InfiniteScroll />
       <Service />
+      <Testimonial />
     </main>
   );
 }
