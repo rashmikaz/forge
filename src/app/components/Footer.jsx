@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import image2 from "../../../public/images/image-2.jpeg";
 
 const Footer = () => {
   const [offset, setOffset] = useState({ x: 0, y: 0 });
@@ -15,13 +14,13 @@ const Footer = () => {
   return (
     <footer
       onMouseMove={handleMouseMove}
-      className="bg-[#1E1E1E] text-gray-300 px-8 py-40 pl-44 pr-44"
+      className="bg-[#1a1d23] text-gray-300 px-8 py-40 pl-44 pr-44"
     >
       <div className="flex flex-col md:flex-row items-center justify-between border-b border-gray-600 pb-4 relative bottom-10">
         <div className="text-white relative bottom-16">
           <h2 className="text-4xl md:text-7xl font-light flex items-center gap-4">
             <Image
-              src={image2}
+              src="/images/profile.jpeg"
               alt="profile"
               width={60}
               height={60}

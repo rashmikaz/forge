@@ -6,6 +6,7 @@ import InfiniteScroll from "./components/InfiniteScroll";
 import Service from "./components/Service";
 import Testimonial from "./components/Testimonial";
 import ConferenceSection from "./components/ConferenceSection";
+import Footer from "./components/Footer";
 
 export default function MainPage() {
   return (
@@ -22,6 +23,7 @@ export default function MainPage() {
       <Service />
       <Testimonial />
       <ConferenceSection />
+      <Footer />
     </main>
   );
 }
