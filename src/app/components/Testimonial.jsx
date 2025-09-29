@@ -7,7 +7,7 @@ import { useState } from "react";
 const slides = [
   {
     testimonial:
-      "Beta Launch has been a vital partner to the USAID Catalyze Private Sector Development program...",
+      "Beta Launch has  been a vital partner to the USAID Catalyze Private Sector Development program been a vital partner to the USAID Catalyze Private Sector Development program...",
     authorName: "Juan Forero",
     authorRole: "USAID CATALYZE Sri Lanka PSD - Activity Team Lead",
     profile: "/images/profile-1.jpg",
@@ -22,12 +22,12 @@ const slides = [
       "The team at Beta Launch transformed our approach to digital solutions...",
     authorName: "Jane Smith",
     authorRole: "Tech Startup Mentor",
-    profile: "/images/profile2.jpeg",
-    dashboardImage: "/images/dashboard2.png",
-    logo: "/images/logo2.png",
+    profile: "/images/profile-2.jpeg",
+    dashboardImage: "/images/dashboard-2.png",
+    logo: "/images/logo-2.png",
     description:
-      "Delivered hands-on UX workshops and mentorship programs across multiple cities...",
-    bgColor: "bg-purple-200",
+      "Delivered hands-on UX workshops and mentorship programs across Delivered hands-on UX workshops Delivered hands-on UX workshops and mentorship programs across and mentorship programs across multiple cities...",
+    bgColor: "bg-[#01c7f4]",
   },
   {
     testimonial:
@@ -136,7 +136,7 @@ export default function Testimonial() {
             </p>
             <a
               href="#"
-              className="inline-flex items-center mt-4 text-green-700 font-medium hover:underline"
+              className="inline-flex items-center mt-4 text-gray-700 font-medium hover:underline"
             >
               Read Case Study <FaArrowRight className="ml-2" />
             </a>
