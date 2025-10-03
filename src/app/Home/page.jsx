@@ -18,10 +18,12 @@ const Home = () => {
   const maxScrollRight = 330;
   const maxScrollDown = 75;
 
+  // Delay before words start moving
+  const delayStart = 100; // pixels
+
   useEffect(() => {
     const handleScroll = () => {
-      const currentScroll = window.scrollY;
-      setScrollY(currentScroll);
+      setScrollY(window.scrollY);
     };
 
     document.body.style.overflow = exitAnimation ? "hidden" : "auto";
@@ -29,12 +31,18 @@ const Home = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [exitAnimation]);
 
-  // Scroll calculations
-  const leftScroll = Math.min(scrollY, maxScrollLeft);
-  const rightScroll = Math.min(scrollY, maxScrollRight);
-  const forgeScroll = Math.min(scrollY, maxScrollDown);
+  // Scroll calculations with delay
+  const leftScroll = Math.min(Math.max(scrollY - delayStart, 0), maxScrollLeft);
+  const rightScroll = Math.min(
+    Math.max(scrollY - delayStart, 0),
+    maxScrollRight
+  );
+  const forgeScroll = Math.min(
+    Math.max(scrollY - delayStart, 0),
+    maxScrollDown
+  );
 
-  // Fade-in progress for social icons
+  // Social icons opacity
   const fadeInScrollStart = 0;
   const fadeInScrollEnd = 200;
   const opacityProgress = Math.min(
@@ -82,10 +90,7 @@ const Home = () => {
               <div className="flex flex-col justify-center space-y-10 pr-20">
                 <p
                   className="text-gray-800 w-70 relative left-40"
-                  style={{
-                    fontSize: "1.7rem",
-                    lineHeight: "2.2rem",
-                  }}
+                  style={{ fontSize: "1.7rem", lineHeight: "2.2rem" }}
                 >
                   We build custom SaaS, AI tools, and lightning-fast MVPs for
                   startups.
@@ -101,10 +106,7 @@ const Home = () => {
                 </h2>
                 <button
                   className="text-gray-800 font-medium hover:underline text-left"
-                  style={{
-                    fontSize: "1.5rem",
-                    lineHeight: "2rem",
-                  }}
+                  style={{ fontSize: "1.5rem", lineHeight: "2rem" }}
                   onClick={() => setExitAnimation(true)}
                 >
                   Get a Free Project Estimate
@@ -143,7 +145,8 @@ const Home = () => {
           </div>
         </div>
 
-        <div style={{ height: "50vh" }}></div>
+        {/* Add enough space to allow page scroll */}
+        <div style={{ height: "150vh" }}></div>
       </motion.div>
 
       {/* About Us Overlay */}
