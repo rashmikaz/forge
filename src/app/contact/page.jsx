@@ -141,9 +141,9 @@ const page = () => {
         </div>
       </aside>
 
-      {/* <div className="absolute top-190 left-60">
+      <div className="my-10 relative bottom-10 left-10">
         <Button />
-      </div> */}
+      </div>
     </div>
   );
 };

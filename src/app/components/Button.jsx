@@ -1,37 +1,36 @@
 "use client";
+
 import React, { useState } from "react";
 
-const Button = () => {
+const Button = ({
+  text = "Get in touch",
+  size = 36,
+  bgColor = "bg-blue-600",
+  textColor = "text-white",
+}) => {
   const [offset, setOffset] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e) => {
-    // effect
-    const moveX = (e.clientX / window.innerWidth - 0.5) * 160;
-    const moveY = (e.clientY / window.innerHeight - 0.5) * 160;
-
+    const moveX = (e.clientX / window.innerWidth - 0.5) * 120;
+    const moveY = (e.clientY / window.innerHeight - 0.5) * 120;
     setOffset({ x: moveX, y: moveY });
   };
 
   return (
-    <div
-      onMouseMove={handleMouseMove}
-      className="flex justify-center items-center h-screen"
-    >
+    <div onMouseMove={handleMouseMove}>
       <button
-        style={{
-          transform: `translate(${offset.x}px, ${offset.y}px)`,
-        }}
-        className="
-          w-28 h-28 
+        style={{ transform: `translate(${offset.x}px, ${offset.y}px)` }}
+        className={`
+          w-${size} h-${size} 
           rounded-full 
-          bg-blue-600 
-          text-white 
+          ${bgColor} 
+          ${textColor} 
           text-sm 
           flex items-center justify-center 
           transition-transform duration-300 ease-out
-        "
+        `}
       >
-        send it
+        {text}
       </button>
     </div>
   );
