@@ -37,7 +37,7 @@ export default function Faq() {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <div className="w-[41%] mx-auto mt-10 space-y-3">
+    <div className="w-[71%] mx-auto mt-25 space-y-3">
       {faqs.map((faq, i) => (
         <div
           key={i}

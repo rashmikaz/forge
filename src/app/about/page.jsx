@@ -60,37 +60,40 @@ const about = () => {
           </p>
         </div>
 
-        <div>
-          <div className="">
-            <h2 className="text-5xl md:text-6xl font-bold w-[105%] relative mb-12 text-left">
-              <span className="text-indigo-600 relative z-10 animate-pulse">
+        <div className="my-10 flex items-start">
+          <div className="mt-25">
+            <h2 className="text-5xl md:text-6xl font-bold relative  text-left">
+              <span className="text-indigo-600 relative z-10 animate-pulse text-7xl md:text-7xl">
                 Got Questions?
               </span>
               <span className="block text-gray-800 mt-2">
                 We Have Answers..
               </span>
-
-              {/* Decorative underline with animation */}
               <span className="absolute left-0 -bottom-3 w-32 h-1 bg-indigo-500 rounded-full transform origin-left scale-x-0 animate-scaleX"></span>
-
-              {/* Optional subtle background effect */}
               <span className="absolute -top-4 left-0 w-40 h-40 bg-indigo-100 rounded-full opacity-30 blur-3xl animate-pulse-slow"></span>
             </h2>
           </div>
-          <div className="relative left-70 mb-15">
+
+          <div className="ml-15 my-10">
             <Faq />
           </div>
         </div>
 
         <div className="my-12">
-          <p className="w-full text-2xl text-[#1E1E1E] leading-relaxed ">
-            Lorem ipsum dolor sit amet, con dhsnqw adipiscing elit, sed do Lorem
-            ipsum dolor amet, conse adipiscing elit, sed do Lorem ipsum dolor
-            sit amet, con dhsnqw adipiscing elit, sed do Lorem ipsum dolor amet,
-            conse adipiscing elit, sed do ipsum dolor amet, conse adipiscing
-            elit, sed do Lorem ipsum dolor sit amet, con dhsnqw adipiscing elit,
-            sed do, Lorem ipsum dolor, amet, conse adipiscing elit,
-          </p>
+          <div className="relative inline-block">
+            <p className="w-full text-2xl text-[#1E1E1E] leading-relaxed">
+              Lorem ipsum dolor sit amet, con dhsnqw adipiscing elit, sed do
+              Lorem ipsum dolor amet, conse adipiscing elit, sed do Lorem ipsum
+              dolor sit amet, con dhsnqw adipiscing elit, sed do Lorem ipsum
+              dolor amet, conse adipiscing elit, sed do ipsum dolor amet, conse
+              adipiscing elit, sed do Lorem ipsum dolor sit amet, con dhsnqw
+              adipiscing elit, sed do, Lorem ipsum dolor, amet, conse adipiscing
+              elit
+            </p>
+            <span className="absolute -right-13 bottom-0 text-9xl text-gray-400">
+              "
+            </span>
+          </div>
         </div>
       </div>
 
