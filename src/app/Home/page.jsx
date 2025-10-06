@@ -15,6 +15,7 @@ const Home = () => {
   const containerRef = useRef(null);
   const [progress, setProgress] = useState(0);
   const [exitAnimation, setExitAnimation] = useState(false);
+  const [navbarFixed, setNavbarFixed] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +29,13 @@ const Home = () => {
         const newProgress = Math.max(0, Math.min(1, scrolled / maxScroll));
 
         setProgress(newProgress);
+
+        // Keep navbar fixed until animation completes (progress reaches 1)
+        if (newProgress >= 0.99) {
+          setNavbarFixed(false);
+        } else {
+          setNavbarFixed(true);
+        }
       }
     };
 
@@ -47,6 +55,7 @@ const Home = () => {
     <>
       <div ref={containerRef} style={{ height: "200vh", position: "relative" }}>
         <section
+          id="home-section"
           ref={homeRef}
           className="sticky top-0 min-h-screen bg-white text-black px-8 font-sans overflow-hidden"
           style={{ zIndex: 10 }}

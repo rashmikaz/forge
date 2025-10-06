@@ -1,4 +1,4 @@
-// src/app/layout.js
+// layout.js - Keep as is, no changes needed
 import { Inria_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inriaSans.variable} antialiased`}>
-        {/* <Navbar /> */}
+        <Navbar />
         {children}
       </body>
     </html>
