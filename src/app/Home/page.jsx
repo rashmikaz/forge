@@ -9,6 +9,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import Intro from "../intro/page";
+import RotatingButton from "../components/RotatingButton";
 
 const Home = () => {
   const homeRef = useRef(null);
@@ -30,7 +31,6 @@ const Home = () => {
 
         setProgress(newProgress);
 
-        // Keep navbar fixed until animation completes (progress reaches 1)
         if (newProgress >= 0.99) {
           setNavbarFixed(false);
         } else {
@@ -41,10 +41,7 @@ const Home = () => {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const moveXLeft = progress * 270;
@@ -70,6 +67,7 @@ const Home = () => {
             }}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center h-full w-full">
+              {/* Left Text: Code Forge */}
               <div
                 className="space-y-14 text-[15rem] font-bold leading-tight ml-28 font-inria"
                 style={{
@@ -91,6 +89,7 @@ const Home = () => {
                 </div>
               </div>
 
+              {/* Right Text and Rotating Button */}
               <div className="flex flex-col justify-center space-y-10 pr-20">
                 <p
                   className="text-gray-800 w-70 relative left-60 top-8"
@@ -104,6 +103,7 @@ const Home = () => {
                   We build custom SaaS, AI tools, and lightning-fast MVPs for
                   startups.
                 </p>
+
                 <div
                   className="text-[15rem] font-bold leading-none font-inria"
                   style={{
@@ -115,21 +115,26 @@ const Home = () => {
                 >
                   Craft
                 </div>
-                <button
-                  className="text-gray-800 font-medium hover:underline text-left relative left-60 bottom-7 w-70"
+
+                {/* ✅ Replaced text button with RotatingButton */}
+                <div
+                  className="relative left-60 bottom-7"
                   style={{
-                    fontSize: "1.5rem",
-                    lineHeight: "2rem",
                     transform: `translateY(${-moveY * 0.6}px)`,
                     transition: "transform 0.05s ease-out",
                   }}
-                  onClick={() => setExitAnimation(true)}
                 >
-                  Get a Free Project Estimate
-                </button>
+                  <div
+                    onClick={() => setExitAnimation(true)}
+                    className="cursor-pointer"
+                  >
+                    <RotatingButton />
+                  </div>
+                </div>
               </div>
             </div>
 
+            {/* Left Social Icons */}
             <div
               style={{
                 position: "fixed",
@@ -161,6 +166,7 @@ const Home = () => {
         </section>
       </div>
 
+      {/* Intro Section */}
       <div
         style={{
           minHeight: "100vh",
@@ -173,6 +179,7 @@ const Home = () => {
         <Intro />
       </div>
 
+      {/* Exit Animation Section */}
       <AnimatePresence>
         {exitAnimation && (
           <motion.div
