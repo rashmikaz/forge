@@ -37,13 +37,13 @@ const Intro = () => {
       </div>
 
       <motion.div style={{ y: smoothY }} className="ml-195">
-        <div
-          className="pb-10 bg-blue-600 
-            text-white w-40 h-40 
-            rounded-full text-sm 
-            flex items-center justify-center relative top-55"
-        >
-          About Us
+        <div className="flex justify-center items-start min-h-screen">
+          <div
+            className="bg-blue-600 text-white w-37 h-37 rounded-full 
+               flex items-center justify-center text-sm mt-95"
+          >
+            About Us
+          </div>
         </div>
       </motion.div>
     </div>
