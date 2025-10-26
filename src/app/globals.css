@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  background: #f2f8fc;
+  /* background: #f2f8fc; */
   font-family: Arial, Helvetica, sans-serif; /* fallback */
   margin: 0;
   padding: 0;

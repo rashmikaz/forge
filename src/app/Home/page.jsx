@@ -8,7 +8,6 @@ import {
   FaTwitter,
   FaLinkedinIn,
 } from "react-icons/fa";
-import Intro from "../intro/page";
 import RotatingButton from "../components/RotatingButton";
 
 const Home = () => {
@@ -54,7 +53,7 @@ const Home = () => {
         <section
           id="home-section"
           ref={homeRef}
-          className="sticky top-0 min-h-screen bg-white text-black px-8 font-sans overflow-hidden"
+          className="sticky top-0 min-h-screen text-black px-8 font-sans overflow-hidden "
           style={{ zIndex: 10 }}
         >
           <div
@@ -69,28 +68,20 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center h-full w-full">
               {/* Left Text: Code Forge */}
               <div
-                className="space-y-14 text-[15rem] font-bold leading-tight ml-28 font-inria"
+                className="space-y-20 text-[15rem] font-bold leading-tight ml-28 font-inria"
                 style={{
-                  transform: `translateX(${moveXLeft}px)`,
+                  transform: `translateX(${moveXLeft}px) translateY(${
+                    -moveY * 0.2
+                  }px)`,
                   transition: "transform 0.05s ease-out",
                 }}
               >
-                <div style={{ transform: `translateY(${-moveY * 0.2}px)` }}>
-                  Code
-                </div>
-
-                <div
-                  style={{
-                    transform: `translateY(${moveY * 0.15 - progress * 40}px)`,
-                    transition: "transform 0.05s ease-out",
-                  }}
-                >
-                  Forge
-                </div>
+                <div>Code</div>
+                <div>Forge</div>
               </div>
 
               {/* Right Text and Rotating Button */}
-              <div className="flex flex-col justify-center space-y-10 pr-20">
+              <div className="flex flex-col justify-center space-y-16 pr-20">
                 <p
                   className="text-gray-800 w-70 relative left-60 top-8"
                   style={{
@@ -108,7 +99,7 @@ const Home = () => {
                   className="text-[15rem] font-bold leading-none font-inria"
                   style={{
                     transform: `translateX(-${moveXRight}px) translateY(${
-                      -moveY * 0.2
+                      -moveY * 0.1
                     }px)`,
                     transition: "transform 0.05s ease-out",
                   }}
@@ -116,7 +107,7 @@ const Home = () => {
                   Craft
                 </div>
 
-                {/* ✅ Replaced text button with RotatingButton */}
+                {/* ✅ RotatingButton Component */}
                 <div
                   className="relative left-60 bottom-7"
                   style={{
@@ -170,13 +161,12 @@ const Home = () => {
       <div
         style={{
           minHeight: "100vh",
-          background: "#f5f5f5",
           padding: "4rem",
           position: "relative",
           zIndex: 1,
         }}
       >
-        <Intro />
+        {/* <Intro /> */}
       </div>
 
       {/* Exit Animation Section */}

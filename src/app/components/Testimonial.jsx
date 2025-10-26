@@ -1,13 +1,11 @@
 "use client";
 
-import Image from "next/image";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useState } from "react";
 
 const slides = [
   {
     testimonial:
-      "Beta Launch has  been a vital partner to the USAID Catalyze Private Sector Development program been a vital partner to the USAID Catalyze Private Sector Development program...",
+      "Beta Launch has been a vital partner to the USAID Catalyze Private Sector Development program been a vital partner to the USAID Catalyze Private Sector Development program...",
     authorName: "Juan Forero",
     authorRole: "USAID CATALYZE Sri Lanka PSD - Activity Team Lead",
     profile: "/images/profile-1.jpg",
@@ -29,30 +27,6 @@ const slides = [
       "Delivered hands-on UX workshops and mentorship programs across Delivered hands-on UX workshops Delivered hands-on UX workshops and mentorship programs across and mentorship programs across multiple cities...",
     bgColor: "bg-[#01c7f4]",
   },
-  {
-    testimonial:
-      "Working with Beta Launch has been instrumental in improving our product strategy...",
-    authorName: "Mark Johnson",
-    authorRole: "Product Manager",
-    profile: "/images/profile3.jpeg",
-    dashboardImage: "/images/dashboard3.png",
-    logo: "/images/logo3.png",
-    description:
-      "Provided a full-scale product management training program for local startups...",
-    bgColor: "bg-blue-200",
-  },
-  {
-    testimonial:
-      "Their workshops provided invaluable insights into market trends and product growth...",
-    authorName: "Emily Davis",
-    authorRole: "Startup Advisor",
-    profile: "/images/profile4.jpeg",
-    dashboardImage: "/images/dashboard4.png",
-    logo: "/images/logo4.png",
-    description:
-      "Focused on mentoring startups with practical solutions for scaling their business...",
-    bgColor: "bg-yellow-200",
-  },
 ];
 
 export default function Testimonial() {
@@ -65,7 +39,10 @@ export default function Testimonial() {
   const slide = slides[current];
 
   return (
-    <section className="pt-10 pl-44 pr-44 pb-15">
+    <section className="pt-0 pl-44 pb-15 my-20">
+      <h3 className="text-blue-600 text-sm font-semibold uppercase tracking-wider mb-4">
+        Client Success Stories
+      </h3>
       <h2 className="text-5xl w-280 my-18">
         Our work helping clients stand out in saturated markets with
         differentiated products and experiences.
@@ -77,12 +54,10 @@ export default function Testimonial() {
           </p>
 
           <div className="flex items-center mt-8">
-            <Image
+            <img
               src={slide.profile}
               alt={slide.authorName}
-              width={56}
-              height={56}
-              className="rounded-full"
+              className="w-14 h-14 rounded-full object-cover"
             />
             <div className="ml-3">
               <h4 className="font-semibold text-gray-900">
@@ -97,11 +72,9 @@ export default function Testimonial() {
           <div
             className={`${slide.bgColor} shadow-md w-full flex justify-center items-center`}
           >
-            <Image
+            <img
               src={slide.dashboardImage}
               alt="Tech Summit Event"
-              width={800}
-              height={500}
               className="w-full h-auto object-contain pl-11"
             />
           </div>
@@ -113,24 +86,42 @@ export default function Testimonial() {
               className="p-2 bg-gray-200 rounded-md hover:opacity-80"
               onClick={prevSlide}
             >
-              <FaArrowLeft className="text-gray-700" />
+              <svg
+                className="w-5 h-5 text-gray-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
             </button>
             <button
               className="p-2 bg-gray-200 rounded-md hover:opacity-80"
               onClick={nextSlide}
             >
-              <FaArrowRight className="text-gray-700" />
+              <svg
+                className="w-5 h-5 text-gray-700"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
             </button>
           </div>
 
           <div>
-            <Image
-              src={slide.logo}
-              alt="Logo"
-              width={140}
-              height={60}
-              className="mb-2"
-            />
+            <img src={slide.logo} alt="Logo" className="mb-2 h-15 w-auto" />
             <p className="text-gray-600 text-base leading-relaxed">
               {slide.description}
             </p>
@@ -138,7 +129,20 @@ export default function Testimonial() {
               href="#"
               className="inline-flex items-center mt-4 text-gray-700 font-medium hover:underline"
             >
-              Read Case Study <FaArrowRight className="ml-2" />
+              Read Case Study
+              <svg
+                className="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
             </a>
           </div>
         </div>

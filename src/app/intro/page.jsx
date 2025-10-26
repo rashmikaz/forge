@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import Service from "../components/Service";
 
 const Intro = () => {
   const y = useMotionValue(0);
@@ -36,16 +37,19 @@ const Intro = () => {
         </p>
       </div>
 
-      <motion.div style={{ y: smoothY }} className="ml-195">
+      <motion.div style={{ y: smoothY }} className="ml-195 ">
         <div className="flex justify-center items-start min-h-screen">
           <div
             className="bg-blue-600 text-white w-37 h-37 rounded-full 
-               flex items-center justify-center text-sm mt-95"
+               flex items-center justify-center text-sm mt-100"
           >
             About Us
           </div>
         </div>
       </motion.div>
+      {/* <div className="relative bottom-150">
+        <Service />
+      </div> */}
     </div>
   );
 };

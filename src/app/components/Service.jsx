@@ -14,39 +14,38 @@ const Scroll = () => (
 const sections = [
   {
     id: "01",
-    title: "DIGITAL SOLUTIONS AND MEDIA",
+    title: "CUSTOM SOFTWARE DEVELOPMENT",
     description:
-      "We deliver secure, scalable, and innovative solutions for modern financial institutions.",
-    videoSrc:
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-    link: "/services/digital-solutions",
+      "Tailored software solutions designed to meet your unique business needs, from enterprise applications to specialized tools.",
+    videoSrc: "/videos/video-1.mp4",
+    link: "/services/custom-software",
   },
   {
     id: "02",
-    title: "FINANCE & BANKING",
+    title: "WEB & MOBILE APP DEVELOPMENT",
     description:
-      "We deliver secure, scalable, and innovative solutions for modern financial institutions.",
+      "Responsive websites and native mobile applications that deliver seamless user experiences across all platforms and devices.",
     videoSrc:
       "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    link: "/services/finance-banking",
+    link: "/services/web-mobile-apps",
   },
   {
     id: "03",
-    title: "TECHNOLOGY & INNOVATION",
+    title: "UI/UX DESIGN",
     description:
-      "We deliver secure, scalable, and innovative solutions for modern financial institutions.",
+      "Beautiful, intuitive interfaces crafted through user research and modern design principles to enhance engagement and satisfaction.",
     videoSrc:
       "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    link: "/services/technology",
+    link: "/services/ui-ux-design",
   },
   {
     id: "04",
-    title: "CONSULTING SERVICES",
+    title: "IT CONSULTATION & SUPPORT",
     description:
-      "We deliver secure, scalable, and innovative solutions for modern financial institutions.",
+      "Expert guidance and ongoing technical support to optimize your technology infrastructure and drive digital transformation.",
     videoSrc:
       "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-    link: "/services/consulting",
+    link: "/services/it-consultation",
   },
 ];
 
@@ -139,18 +138,11 @@ const Service = () => {
   }, [hoveredIndex]);
 
   return (
-    <div className="bg-gray-50 min-h-screen flex flex-col items-center justify-center px-6 py-12 my-60">
-      <div className="w-full max-w-6xl mb-32">
-        <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-          Boost your digital potential service for you
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-700 leading-relaxed max-w-4xl mb-12">
-          Our work style is adaptive. We partner with you to apply the right
-          services at the right time in order to support your needs and growth.
-        </p>
-        <div className="flex justify-center mt-16">
-          <Scroll />
-        </div>
+    <div className="min-h-screen flex flex-col items-center justify-center py-10 px-6 bg-white">
+      <div className="w-full max-w-6xl mb-16">
+        <h3 className="text-blue-600 text-sm font-semibold uppercase tracking-wider">
+          Explore Services
+        </h3>
       </div>
 
       <div className="w-full max-w-6xl space-y-16 relative">
@@ -170,7 +162,7 @@ const Service = () => {
 
             <div className="flex items-center justify-end gap-3 relative z-10 mb-4">
               <span className="text-gray-400 text-lg pr-8">{section.id}/</span>
-              <h2 className="text-3xl md:text-5xl font-bold flex-1 text-right max-w-2xl">
+              <h2 className="text-3xl md:text-5xl font-bold flex-1 text-right max-w-2xl text-gray-900">
                 {section.title}
               </h2>
             </div>

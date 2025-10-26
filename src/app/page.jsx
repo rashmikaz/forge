@@ -14,14 +14,17 @@ export default function MainPage() {
         <HomeComponent />
       </section>
 
-      <section className="h-screen w-full">
+      <section className="h-screen w-full mt-190">
         <Intro />
       </section>
 
-      <Service />
+      <section className="relative bottom-9">
+        <Service />
+      </section>
       <Testimonial />
-      <ConferenceSection />
-      <Footer />
+      {/* <ConferenceSection /> */}
+
+      {/* <Footer /> */}
     </main>
   );
 }
